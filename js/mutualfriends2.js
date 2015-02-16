@@ -56,12 +56,12 @@ function Add(user_id) {
 
 
 function AddUser(user_id) {
-	var grup = -85071256;
-	VK.api('wall.get', {owner_id:'-85071256', count:'50', filter:'others', v: '5.28'}, function(r) {
-		alert("hello");
+
+	VK.api('wall.get', {owner_id:'-86833823', count:'100', filter:'others', v: '5.28'}, function(r) {
+		
 			if(r.response) {
 				
-				alert("hello2");
+			
 			alert(r.response.items.length);
 					 console.log(r.response.items); 
 					 
@@ -69,13 +69,13 @@ function AddUser(user_id) {
 					
 					 
 					 for (var i=0; i<r.response.items.length; i++) {
-						alert(r.response.items[i].from_id);
-alert(usertest);						
+					//	alert(r.response.items[i].from_id);
+					
 						 if (r.response.items[i].from_id ==  usertest ){
 						var html = ''
 									+ '<li class="c-list" >'
 										+ '<div class="contact-pic">'
-											+ '<a href="#"><img src="' +r.response.items[i].text + '" alt="" class="img-responsive"/></a>'
+											+ '<a href="#"><img src="'+ api_result.response[0].photo_50 + '" alt="" class="img-responsive"/></a>'
 										+ '</div>'
 										+ '<div class="contact-details">'
 											+ '<div class="pull-left">'
@@ -83,7 +83,7 @@ alert(usertest);
 												+ '<small>ID' +r.response.items[i].text + '</small>'
 											+ '</div>'
 											+ '<div class="pull-right">'
-												+ '<a href="http://vk.com/id' +r.response.items[i].text + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>'
+												+ '<a href="http://vk.com/moreyroo?w=wall-86833823_' +r.response.items[i].id + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>'
 											+ '</div>'
 											+ '<div class="clearfix"></div>'
 										+ '</div>'
