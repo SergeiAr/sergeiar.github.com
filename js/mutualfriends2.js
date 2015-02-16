@@ -61,20 +61,20 @@ function AddUser(user_id) {
 				
 				alert("hello2");
 			alert(r.response);
-					
+					 console.log(r.response.items); 
 					$('#profiles').append(''
-								+ '<li class="c-list user' + r.response[1].items[0].id + ' pulse animated">'
+								+ '<li class="c-list user' + r.response.items[0].id + ' pulse animated">'
 									+ '<div class="contact-pic">'
-										+ '<a href="#"><img src="' + r.response[1].items[0].from_id + '" alt="" class="img-responsive"/></a>'
+										+ '<a href="#"><img src="' + r.response.items[0].from_id + '" alt="" class="img-responsive"/></a>'
 									+ '</div>'
 									+ '<div class="contact-details">'
 										+ '<div class="pull-left">'
-											+ '<strong>' + r.response[1].items[0].owner_id, + ' ' + r.response[1].items[0].date + '</strong>'
-											+ '<small>ID' + r.response[1].items[0].text + '</small>'
+											+ '<strong>' + r.response.items[0].owner_id, + ' ' + r.response[1].items[0].date + '</strong>'
+											+ '<small>ID' + r.response.items[0].text + '</small>'
 										+ '</div>'
 										+ '<div class="pull-right">'
-											+ '<a href="http://vk.com/id' + r.response[1].items[0].id + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>'
-											+ '<a onclick="Del(' + r.response[1].items[0].id + ');" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>'
+											+ '<a href="http://vk.com/id' + r.response.items[0].id + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>'
+											+ '<a onclick="Del(' + r.response.items[0].id + ');" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>'
 										+ '</div>'
 										+ '<div class="clearfix"></div>'
 									+ '</div>'
