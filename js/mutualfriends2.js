@@ -69,7 +69,7 @@ function AddUser(user_id) {
 									+ '</div>'
 									+ '<div class="contact-details">'
 										+ '<div class="pull-left">'
-											+ '<strong>' + r.response.items[0].owner_id, + ' ' + r.response[1].items[0].date + '</strong>'
+											+ '<strong>' + r.response.items[0].owner_id, + ' ' + r.response.items[0].date + '</strong>'
 											+ '<small>ID' + r.response.items[0].text + '</small>'
 										+ '</div>'
 										+ '<div class="pull-right">'
