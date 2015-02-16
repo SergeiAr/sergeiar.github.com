@@ -27,7 +27,7 @@ function wall() {
 }
 // получаем результат первого запроса к api
 var api_result = JSON.parse($_GET('api_result'));
-var usertest = api_result.response[0].id;
+var usertest = api_result.response[0].uid;
 alert( usertest);
 $('.photo_result_api').html('<img src="' + api_result.response[0].photo_50 + '" alt="" class="img-responsive">');
 $('.name_result_api').html('<strong>' + api_result.response[0].first_name + ' ' + api_result.response[0].last_name + '</strong><small>Это вы, чтобы добавить себя в список нажмите "+"</small>');
