@@ -74,6 +74,7 @@ function AddUser(user_id) {
             {	
 		
 											+ '<small>ID' + r.response.items[j].text + '</small>' 
+											
 				
 			}
 										+ '</div>'
