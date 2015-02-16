@@ -70,12 +70,11 @@ function AddUser(user_id) {
 									+ '<div class="contact-details">'
 										+ '<div class="pull-left">'
 											+ '<strong>' + r.response.items[0].owner_id, + ' ' + r.response.items[0].date + '</strong>'
-											 for (var i=0;i<r.response.length;i++) 
+											 for (var i=0;i<r.response.items.length;i++) 
             {	
-		 for (var j=0;j<r.response[i].items.length;j++)
-                {
-											+ '<small>ID' + r.response.items[j].text + '</small>'
-				}
+		
+											+ '<small>ID' + r.response.items[j].text + '</small>' 
+				
 			}
 										+ '</div>'
 										+ '<div class="pull-right">'
