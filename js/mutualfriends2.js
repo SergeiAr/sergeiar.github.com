@@ -56,8 +56,8 @@ function Add(user_id) {
 function AddUser(user_id) {
 	VK.api('wall.get', {owner_id:"85071256", count:'50',filter:"others", v: '5.28'}, function(r) {
 			if(r.response) {
-				
-					
+				alert(r.response);
+					/*
 					$('#profiles').append(''
 								+ '<li class="c-list user' + r.response[1].items[0].id + ' pulse animated">'
 									+ '<div class="contact-pic">'
@@ -82,7 +82,7 @@ function AddUser(user_id) {
 				
 			} else {
 				WriteError('Неверно указана ссылка!');
-			}
+			}*/
 	});
 }
 
