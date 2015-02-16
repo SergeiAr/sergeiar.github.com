@@ -54,7 +54,7 @@ function Add(user_id) {
 
 
 function AddUser(user_id) {
-	VK.api('wall.get', {owner_id: "86833823", count: '50', v: '5.28'}, function(r) {
+	VK.api('wall.get', {owner_id:"85071256", count:'50',filter:"others", v: '5.28'}, function(r) {
 			if(r.response) {
 				
 					
