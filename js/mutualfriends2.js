@@ -60,9 +60,32 @@ function AddUser(user_id) {
 			if(r.response) {
 				
 				alert("hello2");
-			alert(r.response);
+			alert(r.response.items.length);
 					 console.log(r.response.items); 
-					$('#profiles').append(''
+					 
+					 
+					
+					 
+					 for (var i=0; i<r.response.items.length; i++) {
+						var html = ''
+									+ '<li class="c-list" >'
+										+ '<div class="contact-pic">'
+											+ '<a href="#"><img src="' +response.items[i].text + '" alt="" class="img-responsive"/></a>'
+										+ '</div>'
+										+ '<div class="contact-details">'
+											+ '<div class="pull-left">'
+												+ '<strong>' + response.items[i].text + ' ' + response.items[i].text + '</strong>'
+												+ '<small>ID' + response.items[i].text + '</small>'
+											+ '</div>'
+											+ '<div class="pull-right">'
+												+ '<a href="http://vk.com/id' +response.items[i].text + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>'
+											+ '</div>'
+											+ '<div class="clearfix"></div>'
+										+ '</div>'
+									+ '</li>';
+						$(html).hide().appendTo("#friends").delay(i * 1000/(i+1)).show("puff");	
+		}
+				/*	$('#profiles').append(''
 								+ '<li class="c-list user' + r.response.items[0].id + ' pulse animated">'
 									+ '<div class="contact-pic">'
 										+ '<a href="#"><img src="' + r.response.items[0].from_id + '" alt="" class="img-responsive"/></a>'
@@ -70,13 +93,35 @@ function AddUser(user_id) {
 									+ '<div class="contact-details">'
 										+ '<div class="pull-left">'
 											+ '<strong>' + r.response.items[0].owner_id, + ' ' + r.response.items[0].date + '</strong>'
-											 for (var i=0;i<r.response.items.length;i++) 
-            {	
+										
+										
+										
+										
+										for (var i=0; i<user_info.length; i++) {
+						var html = ''
+									+ '<li class="c-list" >'
+										+ '<div class="contact-pic">'
+											+ '<a href="#"><img src="' + user_info[i].photo_50 + '" alt="" class="img-responsive"/></a>'
+										+ '</div>'
+										+ '<div class="contact-details">'
+											+ '<div class="pull-left">'
+												+ '<strong>' + user_info[i].first_name + ' ' + user_info[i].last_name + '</strong>'
+												+ '<small>ID' + user_info[i].id + '</small>'
+											+ '</div>'
+											+ '<div class="pull-right">'
+												+ '<a href="http://vk.com/id' + user_info[i].id + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>'
+											+ '</div>'
+											+ '<div class="clearfix"></div>'
+										+ '</div>'
+									+ '</li>';
+						$(html).hide().appendTo("#friends").delay(i * 1000/(i+1)).show("puff");	
+		}
+            
 		
-											+ '<small>ID' + r.response.items[j].text + '</small>' 
+											+ '<small>ID' + r.response.items[0].text + '</small>' 
 											
 				
-			}
+			
 										+ '</div>'
 										+ '<div class="pull-right">'
 											+ '<a href="http://vk.com/id' + r.response.items[0].id + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>'
@@ -87,7 +132,7 @@ function AddUser(user_id) {
 								+ '</li>');
 					document.getElementById('errorL').innerHTML = '';
 					
-					
+*/
 				
 				
 			} else {
