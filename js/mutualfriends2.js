@@ -1,3 +1,17 @@
+// параметры переданные через get будут обработаны тут
+function $_GET(key) { return decodeURIComponent(window.location.search.match(new RegExp(key + '=([^&=]+)'))[1]); }
+document.onkeyup = function (e) {
+	e = e || window.event;
+	if (e.keyCode === 13) {
+		ClickAdd();
+	}
+	// Отменяем действие браузера
+	return false;
+}
+function invite() {
+	VK.callMethod('showInviteBox');
+}
+
 VK.api("users.get", {fields:"photo_50"}, function(data) {
     // Действия с полученными данными
 	  if (data.response) {
