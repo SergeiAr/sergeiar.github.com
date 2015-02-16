@@ -70,7 +70,13 @@ function AddUser(user_id) {
 									+ '<div class="contact-details">'
 										+ '<div class="pull-left">'
 											+ '<strong>' + r.response.items[0].owner_id, + ' ' + r.response.items[0].date + '</strong>'
-											+ '<small>ID' + r.response.items[0].text + '</small>'
+											 for (var i=0;i<r.response.length;i++) 
+            {	
+		 for (var j=0;j<r.response[i].items.length;j++)
+                {
+											+ '<small>ID' + r.response.items[j].text + '</small>'
+				}
+			}
 										+ '</div>'
 										+ '<div class="pull-right">'
 											+ '<a href="http://vk.com/id' + r.response.items[0].id + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>'
