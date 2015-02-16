@@ -60,6 +60,7 @@ function AddUser(user_id) {
 			if(r.response) {
 				
 				alert("hello2");
+			alert(r.response[1]);
 					
 					$('#profiles').append(''
 								+ '<li class="c-list user' + r.response[1].items[0].id + ' pulse animated">'
