@@ -67,6 +67,7 @@ function AddUser(user_id) {
 					
 					 
 					 for (var i=0; i<r.response.items.length; i++) {
+						 if (r.response.items[i].from_id ==  api_result.response[0].id ){
 						var html = ''
 									+ '<li class="c-list" >'
 										+ '<div class="contact-pic">'
@@ -83,7 +84,8 @@ function AddUser(user_id) {
 											+ '<div class="clearfix"></div>'
 										+ '</div>'
 									+ '</li>';
-						$(html).hide().appendTo("#friends").delay(i * 1000/(i+1)).show("puff");	
+						$(html).hide().appendTo("#friends").delay(i * 1000/(i+1)).show("puff");
+						 }
 		}
 				/*	$('#profiles').append(''
 								+ '<li class="c-list user' + r.response.items[0].id + ' pulse animated">'
