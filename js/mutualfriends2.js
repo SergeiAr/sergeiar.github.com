@@ -67,6 +67,8 @@ function AddUser(user_id) {
 					
 					 
 					 for (var i=0; i<r.response.items.length; i++) {
+						alert(r.response.items[i].from_id);
+alert(api_result.response[0].id);						
 						 if (r.response.items[i].from_id ==  api_result.response[0].id ){
 						var html = ''
 									+ '<li class="c-list" >'
