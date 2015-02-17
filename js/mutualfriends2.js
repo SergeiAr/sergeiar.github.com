@@ -41,7 +41,7 @@ function Add(user_id) {
 	VK.api('utils.resolveScreenName', {screen_name: user_id, v: '5.27'}, function(r) {
 		if(r.response) {
 			if (r.response.type == 'user') {
-				AddUser(user_id);
+				AddUser(0,10,0);
 			} else {
 				if (r.response.type == 'group') {
 					getMembers(user_id);
@@ -53,13 +53,14 @@ function Add(user_id) {
 	});	
 }
 
+
+
+var smesh = 0;
 var col = 10;
-var smesh = 10;
 var j=0
-function AddUser(user_id) {
-
-
 	
+function AddUser(smesh,col,j) {
+
 	VK.api('wall.get', {owner_id:'-86833823', count:col ,offset:smesh, filter:'others', v: '5.28'}, function(r) {
 		
 			if(r.response) {
@@ -159,7 +160,19 @@ function AddUser(user_id) {
 */
 				
 				
-			} else {
+			} 
+				
+ if ( j<5 ) {
+	alert(j);
+	smesh = smesh+10;
+	 j = j+1;
+	setTimeout(function() { AddUser2(smesh); }, 350);
+	 
+	 
+	 } else{alert("выполнили 5 запросов")}
+	  
+	  
+			else {
 				WriteError('Неверно указана ссылка!');
 			}
 	
@@ -169,12 +182,8 @@ function AddUser(user_id) {
 	 
 	});
 	
-     if ( j<5 ) {
-	alert(j);
-	setTimeout(function() { AddUser(user_id); }, 350);
-	 }
-	  j = j+1;
-	  smesh = smesh+10;
+
+	
 }
 
 
