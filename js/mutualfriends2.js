@@ -161,6 +161,10 @@ function AddUser(smesh,col,j) {
 				
 				
 			} 
+			
+			else {
+				WriteError('Неверно указана ссылка!');
+			}
 				
  if ( j<5 ) {
 	alert(j);
@@ -173,9 +177,6 @@ function AddUser(smesh,col,j) {
 	 } else{alert("выполнили 5 запросов");}
 	  
 	  
-			else {
-				WriteError('Неверно указана ссылка!');
-			}
 	
 	
 	 
