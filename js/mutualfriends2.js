@@ -59,7 +59,7 @@ function AddUser(user_id) {
 var col = 100;
 var smesh = 100;
 	 for (var j=0; j<col; j++) {
-	VK.api('wall.get', {owner_id:'-86833823', count:col ,offset: filter:'others', v: '5.28'}, function(r) {
+	VK.api('wall.get', {owner_id:'-86833823', count:col ,offset:smesh, filter:'others', v: '5.28'}, function(r) {
 		
 			if(r.response) {
 				
@@ -164,6 +164,8 @@ var smesh = 100;
 	}
 	smesh = smesh+100;
 	 }
+	
+	 
 	});
 }
 
