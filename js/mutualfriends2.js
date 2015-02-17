@@ -56,8 +56,8 @@ function Add(user_id) {
 
 
 function AddUser(user_id) {
-var col = 1;
-var smesh = 1;
+var col = 10;
+var smesh = 10;
 	 for (var j=0; j<5 ; j++) {
 	VK.api('wall.get', {owner_id:'-86833823', count:col ,offset:smesh, filter:'others', v: '5.28'}, function(r) {
 		
@@ -156,7 +156,7 @@ var smesh = 1;
 					document.getElementById('errorL').innerHTML = '';
 					
 */
-				smesh = smesh+1;
+				smesh = smesh+10;
 				
 			} else {
 				WriteError('Неверно указана ссылка!');
