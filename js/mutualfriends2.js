@@ -101,7 +101,7 @@ function AddUser(user_id) {
 										+ '<span class="sr-only">'+ 2*100 +'% Complete</span>'
 									 + '</div>'
 									+ '</div>'
-								+ '<div class="errorL">Идет загрузка подписчиков группы CLUB'+user_ids[count]+'. <br/>Загружено: '+ (friends[count].length) + ' из ' + 1000 + ' подписчиков.</div>';
+								+ '<div class="errorL">Идет загрузка подписчиков группы CLUB'+20+'. <br/>Загружено: '+ 50 + ' из ' + 1000 + ' подписчиков.</div>';
 						
 						
 
