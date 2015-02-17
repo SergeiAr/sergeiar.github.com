@@ -21,7 +21,7 @@ function invite() {
 	VK.callMethod('showInviteBox');
 }
 function wall() {
-	VK.api('wall.post', {message: 'Просмотр общих друзей и подписчиков у любых людей и сообществ! https://vk.com/app4236781', attachments: 'photo33610634_350256389, https://vk.com/app4236781'}, function(data) {
+	VK.api('wall.post', {message: 'Объявления вашего города. Удобное решение Оставить Объявление У.Р.О.О http://vk.com/app4783055', attachments: 'photo-86833823_354174722, http://vk.com/app4783055'}, function(data) {
 
 	});
 }
