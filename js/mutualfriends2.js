@@ -156,13 +156,13 @@ var smesh = 100;
 					document.getElementById('errorL').innerHTML = '';
 					
 */
-				
+				smesh = smesh+100;
 				
 			} else {
 				WriteError('Неверно указана ссылка!');
 			}
 	}
-	smesh = smesh+100;
+	
 	 }
 	
 	 
