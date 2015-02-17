@@ -53,12 +53,13 @@ function Add(user_id) {
 	});	
 }
 
-
-
-function AddUser(user_id) {
 var col = 10;
 var smesh = 10;
-	 for (var j=0; j<5 ; j++) {
+var j=0
+function AddUser(user_id) {
+
+
+	
 	VK.api('wall.get', {owner_id:'-86833823', count:col ,offset:smesh, filter:'others', v: '5.28'}, function(r) {
 		
 			if(r.response) {
@@ -167,8 +168,13 @@ var smesh = 10;
 	
 	 
 	});
-	smesh = smesh+10;
-    }
+	
+     if ( j<5 ) {
+	alert(j);
+	setTimeout(function() { AddUser(user_id); }, 350);
+	 }
+	  j = j+1;
+	  smesh = smesh+10;
 }
 
 
