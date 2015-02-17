@@ -80,7 +80,7 @@ function AddUser(user_id) {
 										+ '<div class="contact-details">'
 											+ '<div class="pull-left">'
 												+ '<strong>' +r.response.items[i].text + '</strong>'
-												+ '<small>номер' +r.response.items[i].id + '</small>'
+												+ '<small>номер: ' +r.response.items[i].id + '</small>'
 											+ '</div>'
 											+ '<div class="pull-right">'
 												+ '<a href="http://vk.com/moreyroo?w=wall-86833823_' +r.response.items[i].id + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>'
@@ -89,7 +89,23 @@ function AddUser(user_id) {
 										+ '</div>'
 									+ '</li>';
 						$(html).hide().appendTo("#friends").delay(i * 1000/(i+1)).show("puff");
-						 }
+
+
+						document.getElementById('friends').innerHTML = ''
+								+ '<li class="contact-alpha">'
+									+ 'Общего <span class="label label-info pull-right">0</span>'
+									+ '<div class="clearfix"></div>'
+								+ '</li>'
+									+ '<div class="progress progress-striped active">'
+									  + '<div id="progress" class="progress-bar" role="progressbar" aria-valuenow="'+ 2*100 +'" aria-valuemin="0" aria-valuemax="100" style="width: '+ (2/1000)*100 +'%">'
+										+ '<span class="sr-only">'+ 2*100 +'% Complete</span>'
+									 + '</div>'
+									+ '</div>'
+								+ '<div class="errorL">Идет загрузка подписчиков группы CLUB'+user_ids[count]+'. <br/>Загружено: '+ (friends[count].length) + ' из ' + 1000 + ' подписчиков.</div>';
+						
+						
+
+						}
 		}
 				/*	$('#profiles').append(''
 								+ '<li class="c-list user' + r.response.items[0].id + ' pulse animated">'
@@ -146,6 +162,63 @@ function AddUser(user_id) {
 			}
 	});
 }
+
+
+
+
+
+
+// Проба прогресс бар
+
+/*
+
+
+function getMembers20k(group_id, members_count) {
+	var code =  'var members = API.wall.get({"group_id": ' + group_id + ', "v": "5.27", "sort": "id_asc", "count": "1000", "offset": ' + friends[count].length + '}).items;' // делаем первый запрос и создаем массив
+			+	'var offset = 1000;' // это сдвиг по участникам группы
+			+	'while (offset < 25000 && (offset + ' + friends[count].length + ') < ' + members_count + ')' // пока не получили 20000 и не прошлись по всем участникам
+			+	'{'
+				+	'members = members + "," + API.groups.getMembers({"group_id": ' + group_id + ', "v": "5.27", "sort": "id_asc", "count": "1000", "offset": (' + friends[count].length + ' + offset)}).items;' // сдвиг участников на offset + мощность массива
+				+	'offset = offset + 1000;' // увеличиваем сдвиг на 1000
+			+	'};'
+			+	'return members;'; // вернуть массив members
+
+	VK.api("execute", {code: code}, function(data) {
+		if (data.response) {
+			friends[count] = friends[count].concat(JSON.parse("[" + data.response + "]")); // запишем это в массив
+			$('.member_ids').html('Загрузка: ' + friends[count].length + '/' + members_count);
+			if (members_count >  friends[count].length) { // если еще не всех участников получили
+				setTimeout(function() { getMembers20k(group_id, members_count); }, 350); // задержка 0.35 с. после чего запустим еще раз
+				document.getElementById('friends').innerHTML = ''
+								+ '<li class="contact-alpha">'
+									+ 'Общего <span class="label label-info pull-right">0</span>'
+									+ '<div class="clearfix"></div>'
+								+ '</li>'
+									+ '<div class="progress progress-striped active">'
+									  + '<div id="progress" class="progress-bar" role="progressbar" aria-valuenow="'+ (friends[count].length/members_count)*100 +'" aria-valuemin="0" aria-valuemax="100" style="width: '+ (friends[count].length/members_count)*100 +'%">'
+										+ '<span class="sr-only">'+ (friends[count].length/members_count)*100 +'% Complete</span>'
+									 + '</div>'
+									+ '</div>'
+								+ '<div class="errorL">Идет загрузка подписчиков группы CLUB'+user_ids[count]+'. <br/>Загружено: '+ (friends[count].length) + ' из ' + members_count + ' подписчиков.</div>';
+			} else // если конец то
+				if (user_ids.length != ++count) GetFriend(); else MutualFriends();
+		} else {
+			alert(data.error.error_msg); // в случае ошибки выведем её
+		}
+	});
+}
+
+
+
+
+
+*/
+
+
+
+
+
+
 
 
 
