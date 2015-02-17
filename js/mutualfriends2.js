@@ -55,7 +55,7 @@ function Add(user_id) {
 
 
 
-var smesh = 0;
+var smesh = 1;
 var col = 10;
 var j=0
 	
