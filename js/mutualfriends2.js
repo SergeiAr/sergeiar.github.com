@@ -166,7 +166,7 @@ function AddUser(smesh,col,j) {
 				WriteError('Неверно указана ссылка!');
 			}
 				
- if ( j<5 ) {
+ if ( j<10 ) {
 	alert(j);
 	col = 10;
 	smesh = smesh+10;
