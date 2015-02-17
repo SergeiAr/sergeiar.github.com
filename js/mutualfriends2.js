@@ -56,8 +56,10 @@ function Add(user_id) {
 
 
 function AddUser(user_id) {
-
-	VK.api('wall.get', {owner_id:'-86833823', count:'100', filter:'others', v: '5.28'}, function(r) {
+var col = 100;
+var smesh = 100;
+	 for (var j=0; j<col; j++) {
+	VK.api('wall.get', {owner_id:'-86833823', count:col ,offset: filter:'others', v: '5.28'}, function(r) {
 		
 			if(r.response) {
 				
@@ -159,6 +161,9 @@ function AddUser(user_id) {
 			} else {
 				WriteError('Неверно указана ссылка!');
 			}
+	}
+	smesh = smesh+100;
+	 }
 	});
 }
 
