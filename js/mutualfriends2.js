@@ -89,8 +89,10 @@ function AddUser(user_id) {
 										+ '</div>'
 									+ '</li>';
 						$(html).hide().appendTo("#friends").delay(i * 1000/(i+1)).show("puff");
+			
 
-
+						}
+						
 						document.getElementById('friends').innerHTML = ''
 								+ '<li class="contact-alpha">'
 									+ 'Общего <span class="label label-info pull-right">0</span>'
@@ -102,10 +104,6 @@ function AddUser(user_id) {
 									 + '</div>'
 									+ '</div>'
 								+ '<div class="errorL">Идет загрузка подписчиков группы CLUB'+20+'. <br/>Загружено: '+ 50 + ' из ' + 1000 + ' подписчиков.</div>';
-						
-						
-
-						}
 		}
 				/*	$('#profiles').append(''
 								+ '<li class="c-list user' + r.response.items[0].id + ' pulse animated">'
