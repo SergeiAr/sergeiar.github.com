@@ -167,14 +167,16 @@ function AddUser(smesh,col,j) {
 			}
 				
  if ( j<10 ) {
-	alert(j);
+	//alert(j);
 	col = 10;
 	smesh = smesh+10;
 	 j = j+1;
 	setTimeout(function() { AddUser(smesh,col,j); }, 350);
 	 
 	 
-	 } else{alert("выполнили 5 запросов");}
+	 } else{
+		 alert("Выполнен поиск по 1000 последних записей");
+	 }
 	  
 	  
 	
