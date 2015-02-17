@@ -169,7 +169,7 @@ function AddUser(smesh,col,j) {
 	setTimeout(function() { AddUser2(smesh); }, 350);
 	 
 	 
-	 } else{alert("выполнили 5 запросов")}
+	 } else{alert("выполнили 5 запросов");}
 	  
 	  
 			else {
