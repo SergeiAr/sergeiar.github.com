@@ -156,7 +156,7 @@ var smesh = 10;
 					document.getElementById('errorL').innerHTML = '';
 					
 */
-				smesh = smesh+10;
+				
 				
 			} else {
 				WriteError('Неверно указана ссылка!');
@@ -167,6 +167,7 @@ var smesh = 10;
 	
 	 
 	});
+	smesh = smesh+10;
     }
 }
 
